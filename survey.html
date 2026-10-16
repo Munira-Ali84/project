@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Survey - Green Horizons</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation (same as index.html - keep identical on all pages) -->
+    <header class="header">
+        <div class="nav-shell">
+            <a href="index.html" class="brand">
+                <span class="brand-mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 3.8C13 3.6 6.5 6.2 4.3 11.2c-1.2 2.8.2 5.7 2.9 6.6 4.2 1.4 8.2-2.8 10.4-7.2"/><path d="M3.5 21c2.3-4.6 6.2-8 11.8-10.2"/></svg></span>
+                <span><b>GREEN HORIZONS</b><small>Imam Mohammad Ibn Saud Islamic University</small></span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Welcome</a>
+                <a href="sustainable.html">Sustainable Life</a>
+                <a href="survey.html" class="active">Survey</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="signin.html" class="text-button">Sign in</a>
+                <a href="signup.html" class="primary-button small">Sign up</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="survey-page">
+        <div class="survey-intro">
+            <div class="eyebrow"><span></span> YOUR GREEN PLEDGE</div>
+            <h1>Small habits.<br><em>Remarkable impact.</em></h1>
+            <p>Tell us which environmental topics matter to you and which sustainable practices are already part of your life, or which ones you're ready to begin.</p>
+        </div>
+
+        <form class="survey-form" onsubmit="return checkSurvey(event);">
+
+            <!-- Step 1: Topics -->
+            <div class="survey-progress">
+                <span>01</span>
+                <div>
+                    <b>Choose environmental topics</b>
+                    <small>Select all that interest you</small>
+                </div>
+                <i>STEP 1 OF 3</i>
+            </div>
+
+            <div class="practice-grid">
+                <label class="practice"><span class="practice-icon">🌍</span><span><b>Climate change</b><small>Reducing emissions and carbon</small></span><input type="checkbox" name="topic" value="climate"></label>
+                <label class="practice"><span class="practice-icon">🦅</span><span><b>Wildlife protection</b><small>Saving native species and habitats</small></span><input type="checkbox" name="topic" value="wildlife"></label>
+                <label class="practice"><span class="practice-icon">🌊</span><span><b>Marine life</b><small>Red Sea reefs and coastlines</small></span><input type="checkbox" name="topic" value="marine"></label>
+                <label class="practice"><span class="practice-icon">🌞</span><span><b>Renewable energy</b><small>Solar and wind power</small></span><input type="checkbox" name="topic" value="renewable"></label>
+            </div>
+
+            <!-- Step 2: Practices -->
+            <div class="survey-progress">
+                <span>02</span>
+                <div>
+                    <b>Choose your practices</b>
+                    <small>Select all that apply</small>
+                </div>
+                <i>STEP 2 OF 3</i>
+            </div>
+
+            <div class="practice-grid">
+                <label class="practice"><span class="practice-icon">💧</span><span><b>Conserve water</b><small>Shorter showers and mindful use</small></span><input type="checkbox" name="practice" value="water"></label>
+                <label class="practice"><span class="practice-icon">⚡</span><span><b>Save energy</b><small>Switch off and unplug</small></span><input type="checkbox" name="practice" value="energy"></label>
+                <label class="practice"><span class="practice-icon">♻️</span><span><b>Sort &amp; recycle</b><small>Give materials a second life</small></span><input type="checkbox" name="practice" value="recycle"></label>
+                <label class="practice"><span class="practice-icon">🌳</span><span><b>Plant native trees</b><small>Grow a greener campus</small></span><input type="checkbox" name="practice" value="trees"></label>
+            </div>
+
+            <!-- Step 3: Feedback -->
+            <div class="survey-progress">
+                <span>03</span>
+                <div>
+                    <b>Write your feedback</b>
+                    <small>Tell us your ideas</small>
+                </div>
+                <i>STEP 3 OF 3</i>
+            </div>
+
+            <label class="feedback-label">
+                <span><b>Share your ideas</b><small>What should our university do to become more sustainable?</small></span>
+                <textarea id="feedback" placeholder="Write your thoughts here..." rows="5" required></textarea>
+            </label>
+
+            <div class="form-end">
+                <p class="auth-note">Make your voice count</p>
+                <button class="primary-button" type="submit">Submit my green pledge</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer (same as index.html + social links) -->
+    <footer>
+        <div class="footer-main page-shell">
+            <div>
+                <a href="index.html" class="brand" style="color: white;">
+                    <span class="brand-mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.2 3.8C13 3.6 6.5 6.2 4.3 11.2c-1.2 2.8.2 5.7 2.9 6.6 4.2 1.4 8.2-2.8 10.4-7.2"/></svg></span>
+                    <span><b>GREEN HORIZONS</b><small style="color: rgba(255,255,255,.6);">Imam Mohammad University</small></span>
+                </a>
+                <p>A student environmental awareness initiative inspired by Saudi Vision 2030.</p>
+            </div>
+            <div>
+                <b>Explore</b>
+                <button onclick="location.href='index.html'">Welcome</button>
+                <button onclick="location.href='sustainable.html'">Sustainable Life</button>
+                <button onclick="location.href='survey.html'">Green Survey</button>
+            </div>
+            <div>
+                <b>Connect</b>
+                <span>greenhorizons@imamu.edu.sa</span>
+                <span>Riyadh, Saudi Arabia</span>
+                <span>+966 11 258 0000</span>
+                <span class="footer-social">
+                    <a href="https://x.com/" target="_blank">X</a>
+                    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                    <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+                </span>
+            </div>
+            <div class="vision-mark">
+                <strong>2030</strong>
+                <span>SAUDI<br>VISION</span>
+            </div>
+        </div>
+        <div class="footer-bottom page-shell">
+            <span>© 2026 Green Horizons · Imam Mohammad Ibn Saud Islamic University</span>
+            <span>For our land. For our future.</span>
+        </div>
+    </footer>
+
+    <script>
+        // Make sure at least one topic and one practice are selected
+        function checkSurvey(event) {
+            event.preventDefault();
+            var topics = document.querySelectorAll('input[name="topic"]:checked').length;
+            var practices = document.querySelectorAll('input[name="practice"]:checked').length;
+            if (topics === 0 || practices === 0) {
+                alert('Please select at least one topic and one practice.');
+                return false;
+            }
+            alert('Thank you for your green pledge!');
+            location.href = 'index.html';
+            return false;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Green Horizons</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation (same as index.html - keep identical on all pages) -->
+    <header class="header">
+        <div class="nav-shell">
+            <a href="index.html" class="brand">
+                <span class="brand-mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 3.8C13 3.6 6.5 6.2 4.3 11.2c-1.2 2.8.2 5.7 2.9 6.6 4.2 1.4 8.2-2.8 10.4-7.2"/><path d="M3.5 21c2.3-4.6 6.2-8 11.8-10.2"/></svg></span>
+                <span><b>GREEN HORIZONS</b><small>Imam Mohammad Ibn Saud Islamic University</small></span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Welcome</a>
+                <a href="sustainable.html">Sustainable Life</a>
+                <a href="survey.html">Survey</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="signin.html" class="text-button">Sign in</a>
+                <a href="signup.html" class="primary-button small">Sign up</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="survey-page auth-page">
+        <div class="auth-container wide">
+            <div class="section-label">JOIN THE MOVEMENT</div>
+            <h2>Create your profile</h2>
+            <p class="auth-note">Connect with students taking action for a greener Saudi Arabia.</p>
+
+            <form class="account-form" onsubmit="event.preventDefault(); alert('Profile created successfully! You can now sign in.'); location.href='signin.html';">
+                <div class="field-row">
+                    <label>Full name <input required type="text" placeholder="Your full name"></label>
+                    <label>Date of birth <input required type="date"></label>
+                </div>
+
+                <div class="field-row">
+                    <label>Gender
+                        <select required>
+                            <option value="" disabled selected>Select</option>
+                            <option>Female</option>
+                            <option>Male</option>
+                        </select>
+                    </label>
+                    <label>Academic level
+                        <select required>
+                            <option value="" disabled selected>Select</option>
+                            <option>Undergraduate</option>
+                            <option>Graduate</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="field-row">
+                    <label>College <input required type="text" placeholder="e.g., College of Computer and Information Sciences"></label>
+                    <label>Home city <input required type="text" placeholder="e.g., Riyadh"></label>
+                </div>
+
+                <div class="field-row">
+                    <label>Username <input required type="text" placeholder="Choose a username"></label>
+                    <label>Password <input required type="password" minlength="8" placeholder="At least 8 characters"></label>
+                </div>
+
+                <fieldset class="interests">
+                    <legend>Environmental interests</legend>
+                    <label><input type="checkbox" name="interest" value="recycling"> Recycling</label>
+                    <label><input type="checkbox" name="interest" value="renewable"> Renewable energy</label>
+                    <label><input type="checkbox" name="interest" value="wildlife"> Wildlife</label>
+                    <label><input type="checkbox" name="interest" value="water"> Water conservation</label>
+                </fieldset>
+
+                <button class="primary-button full" type="submit">Create my profile</button>
+                <p class="auth-switch">Already a member? <a href="signin.html">Sign in</a></p>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer (same as index.html + social links) -->
+    <footer>
+        <div class="footer-main page-shell">
+            <div>
+                <a href="index.html" class="brand" style="color: white;">
+                    <span class="brand-mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.2 3.8C13 3.6 6.5 6.2 4.3 11.2c-1.2 2.8.2 5.7 2.9 6.6 4.2 1.4 8.2-2.8 10.4-7.2"/></svg></span>
+                    <span><b>GREEN HORIZONS</b><small style="color: rgba(255,255,255,.6);">Imam Mohammad University</small></span>
+                </a>
+                <p>A student environmental awareness initiative inspired by Saudi Vision 2030.</p>
+            </div>
+            <div>
+                <b>Explore</b>
+                <button onclick="location.href='index.html'">Welcome</button>
+                <button onclick="location.href='sustainable.html'">Sustainable Life</button>
+                <button onclick="location.href='survey.html'">Green Survey</button>
+            </div>
+            <div>
+                <b>Connect</b>
+                <span>greenhorizons@imamu.edu.sa</span>
+                <span>Riyadh, Saudi Arabia</span>
+                <span>+966 11 258 0000</span>
+                <span class="footer-social">
+                    <a href="https://x.com/" target="_blank">X</a>
+                    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                    <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+                </span>
+            </div>
+            <div class="vision-mark">
+                <strong>2030</strong>
+                <span>SAUDI<br>VISION</span>
+            </div>
+        </div>
+        <div class="footer-bottom page-shell">
+            <span>© 2026 Green Horizons · Imam Mohammad Ibn Saud Islamic University</span>
+            <span>For our land. For our future.</span>
+        </div>
+    </footer>
+
+</body>
+</html>
